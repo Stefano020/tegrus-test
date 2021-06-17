@@ -1,8 +1,17 @@
+import React, { useEffect } from 'react';
+import brakingBadApi from './services/BrakingBadAPI';
+import Provider from './context/Provider';
+import Routes from './Routes';
+
 function App() {
+  useEffect(() => {
+    brakingBadApi();
+  }, [])
+
   return (
-    <div>
-      <p>My App</p>
-    </div>
+    <Provider>
+      <Routes />
+    </Provider>
   );
 }
 
