@@ -1,1 +1,0 @@
-# tegrus-test
