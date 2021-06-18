@@ -9,7 +9,7 @@ export default function ProductsProvider({ children }) {
   useEffect(() => {
     brakingBadApi().then((response) => {
       setCharacters(response);
-    })
+    });
   }, []);
 
   const context = {
