@@ -1,0 +1,53 @@
+// Base: contained within this file are all your resets, variables, mixins, and any utility classes.
+$white: #f8f6f6;
+$citron: rgba(142, 167, 55, 1);
+$forest-green-traditional: rgb(5, 82, 18);
+$forest-green-traditional-2: rgb(5, 68, 14);
+$forest-green-traditional-3: rgba(4, 51, 6, 1);
+$saffron: rgba(230, 184, 3, 1);
+$lemon-curry: rgba(187, 155, 12, 1);
+$bistre-brown: rgba(148, 119, 9, 1);
+$olive-drab-7: rgba(43, 31, 0, 1);
+$black-chocolate: rgba(24, 17, 0, 1);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 1rem;
+  text-align: center;
+}
+
+.background {
+  // background-image: url("../images/Breaking\ Bad\ Wallpapers\ Desktop.jpeg");
+  background-color: $forest-green-traditional-2;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $white;
+}
+
+h2 {
+  color: $saffron;
+  font-size: 2rem;
+}

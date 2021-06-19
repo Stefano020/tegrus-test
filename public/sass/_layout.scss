@@ -1,0 +1,16 @@
+// Layout: contains all the CSS that handles the layout, such as the container and any grid systems.
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+// .card {
+//   flex: 0 1;
+// }
+
+.card-image {
+  width: 100;
+  height: 40rem;
+  object-fit: cover;
+}
