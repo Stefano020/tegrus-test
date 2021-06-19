@@ -5,6 +5,7 @@ import brakingBadApi from '../services/BrakingBadAPI';
 
 export default function ProductsProvider({ children }) {
   const [characters, setCharacters] = useState([]);
+  const [favoriteCharacters, setFavoriteCharacters] = useState([])
 
   useEffect(() => {
     brakingBadApi().then((response) => {
@@ -15,6 +16,8 @@ export default function ProductsProvider({ children }) {
   const context = {
     characters,
     setCharacters,
+    favoriteCharacters,
+    setFavoriteCharacters,
   };
 
   return (
