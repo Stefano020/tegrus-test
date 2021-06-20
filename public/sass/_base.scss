@@ -1,12 +1,13 @@
 // Base: contained within this file are all your resets, variables, mixins, and any utility classes.
-$white: #f8f6f6;
+$white: #f1f1f1;
 $citron: rgba(142, 167, 55, 1);
 $forest-green-traditional: rgb(5, 82, 18);
 $forest-green-traditional-2: rgb(5, 68, 14);
 $forest-green-traditional-3: rgba(4, 51, 6, 1);
-$saffron: rgba(230, 184, 3, 1);
-$lemon-curry: rgba(187, 155, 12, 1);
-$bistre-brown: rgba(148, 119, 9, 1);
+$yellow-pantone: rgb(253, 228, 4);
+$saffron: rgb(230, 185, 3);
+$lemon-curry: rgb(187, 155, 12);
+$bistre-brown: rgb(148, 118, 9);
 $olive-drab-7: rgba(43, 31, 0, 1);
 $black-chocolate: rgba(24, 17, 0, 1);
 
@@ -30,11 +31,17 @@ body {
   box-sizing: border-box;
   margin: 1rem;
   text-align: center;
+  background-color: $yellow-pantone;
 }
 
 .background {
-  // background-image: url("../images/Breaking\ Bad\ Wallpapers\ Desktop.jpeg");
-  background-color: $forest-green-traditional-2;
+  background-image: linear-gradient(
+    to right bottom,
+    $saffron,
+    $lemon-curry,
+    $bistre-brown
+  );
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 a {
@@ -42,12 +49,21 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
-  color: $white;
+  color: $black-chocolate;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  color: $saffron;
+  color: $white;
   font-size: 2rem;
+  padding-bottom: 0.3rem;
+}
+
+p,
+label {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $white;
 }
