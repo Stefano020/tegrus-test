@@ -4,7 +4,7 @@ Breaking Bad Characters is a website that shows Breaking Bad serie characters, s
 
 ## Installation
 
-Use the package manager [pip](https://docs.npmjs.com/) to install foobar.
+Use the package manager [npm](https://docs.npmjs.com/) to install foobar.
 
 ```bash
 npm install
