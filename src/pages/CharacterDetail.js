@@ -51,7 +51,7 @@ return (
       ? <Loading />
       : <div>
           <header className="header-container">
-            <h1 className="title">Favorite Characters</h1>
+            <h1 className="title">Chracter Detail</h1>
             <Link
               className="title-button"
               to={'/'}
