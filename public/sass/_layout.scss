@@ -1,0 +1,61 @@
+// Layout: contains all the CSS that handles the layout, such as the container and any grid systems.
+// TITLE Layout
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.title,
+.title-button {
+  margin-left: auto;
+}
+
+.title-button {
+  padding-top: 2rem;
+  padding-right: 2rem;
+  background: transparent;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+  }
+}
+
+// DETAILS LAYOUT
+.details-container {
+  display: flex;
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+.details-name {
+  font-size: 5rem;
+  letter-spacing: 0.4rem;
+}
+
+.details-img {
+  width: 40rem;
+  height: 50rem;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  object-fit: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 2);
+}
+
+.details-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+.details-item-occupation {
+  display: flex;
+  flex-direction: row;
+}
