@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import BrakingBadContext from '../context/BrakingBadContext';
+import BreakingBadContext from '../context/BreakingBadContext';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import HomeIcon from '../icons/icons8-home.svg';
@@ -8,7 +8,7 @@ import GreenFavorite from '../icons/icons8-breaking-bad-green.svg';
 import Loading from '../components/Loading';
 
 export default function CharacterDetail() {
-  const { characters } = useContext(BrakingBadContext);
+  const { characters } = useContext(BreakingBadContext);
   const { id } = useParams();
   const characterDetail = characters.find((character) => character.char_id === Number(id));
   const favsFromStorage = JSON.parse(localStorage.getItem('favoriteCharacters'));
@@ -51,7 +51,7 @@ return (
       ? <Loading />
       : <div>
           <header className="header-container">
-            <h1 className="title">Favorite Characters</h1>
+            <h1 className="title">Chracter Detail</h1>
             <Link
               className="title-button"
               to={'/'}
