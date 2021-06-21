@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import BrakingBadContext from '../context/BrakingBadContext';
+import BreakingBadContext from '../context/BreakingBadContext';
 import BreakingbadIconBlack from '../icons/icons8-breaking-bad-black.svg';
 import Loading from '../components/Loading';
 
 export default function Main() {
-  const { characters } = useContext(BrakingBadContext);
+  const { characters } = useContext(BreakingBadContext);
   
   return (
     <div className="background">

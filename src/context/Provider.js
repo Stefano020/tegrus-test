@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import BrakingBadContext from './BrakingBadContext';
+import BreakingBadContext from './BreakingBadContext';
 import brakingBadApi from '../services/BrakingBadAPI';
 
 export default function ProductsProvider({ children }) {
@@ -18,9 +18,9 @@ export default function ProductsProvider({ children }) {
   };
 
   return (
-    <BrakingBadContext.Provider value={ context }>
+    <BreakingBadContext.Provider value={ context }>
       {children}
-    </BrakingBadContext.Provider>
+    </BreakingBadContext.Provider>
   );
 }
 
