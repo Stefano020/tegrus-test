@@ -1,8 +1,47 @@
 // Components: anything reusable such as buttons, navbars, cards etc.
+// CARDS COMPONENTS
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: $black-chocolate;
+  padding: 0.5rem;
+  padding-bottom: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 1rem 1rem 5rem 1rem;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card-image {
+  width: 20rem;
+  height: 30rem;
+  object-fit: cover;
+}
+
+// CHECKBOX COMPONENT
+.checkbox-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .favorite-check-box {
   display: none;
 }
 
 .checkbox-label {
+  width: 8rem;
+  display: flex;
   cursor: pointer;
+  justify-content: center;
+}
+.checkbox-img {
+  width: 80px;
 }

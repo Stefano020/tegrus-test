@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import HomeIcon from '../icons/icons8-home.svg';
 import WhiteFavorite from '../icons/icons8-breaking-bad-white.svg';
 import GreenFavorite from '../icons/icons8-breaking-bad-green.svg';
+import Loading from '../components/Loading';
 
 export default function CharacterDetail() {
   const { characters } = useContext(BrakingBadContext);
@@ -46,56 +47,79 @@ export default function CharacterDetail() {
 
 return (
   <div className="background">
-      {(!characters.length)
-        ? <h1>Loading...</h1>
-        : <div>
-            <header className="header-container">
-              <h1 className="title">Favorite Characters</h1>
-              <Link
-                className="title-button"
-                to={'/'}
-                >
-                <img
-                  src={ HomeIcon }
-                  alt="Home Button"
-                />
-              </Link>
-            </header>
-            <main className="details-container">
-              <section className="details-content">
-                <img className="details-img" src={characterDetail.img} alt="Character" />
+    {(!characters.length)
+      ? <Loading />
+      : <div>
+          <header className="header-container">
+            <h1 className="title">Favorite Characters</h1>
+            <Link
+              className="title-button"
+              to={'/'}
+              >
+              <img
+                className="title-button-img"
+                src={ HomeIcon }
+                alt="Home Button"
+              />
+            </Link>
+          </header>
+          <main className="details-container">
+            <section>
+              <img className="details-img" src={characterDetail.img} alt="Character" />
+            </section>
+            <section className="details-content">
+              <h2 className="details-name">{characterDetail.name}</h2>
+              <section className="details-item">
+                <h4>Seasons:</h4>
+                {characterDetail.appearance.map(
+                  (app => <p key={ app }>{ app }</p>)
+                )}
               </section>
-              <section className="details-content">
-                <h2>{characterDetail.name}</h2>
-                <section >
-                  {characterDetail.appearance.map((app => <p key={ app }>{app}</p>))}
-                </section>
+              <section className="details-item">
+                <h4>Series:</h4>
                 <p>{characterDetail.category}</p>
+              </section>
+              <section className="details-item">
+                <h4>Nickname:</h4>
                 <p>{characterDetail.nickname}</p>
-                <section>
-                  {characterDetail.occupation.map((occ => <p key={ occ }>{occ}</p>))}
+              </section>
+                <section className="details-item">
+                  <h4>Occupation:</h4>
+              <div className="details-item-occupation">
+                  {characterDetail.occupation.map(
+                    (occ => <p key={ occ }>{`${ occ }`}</p>)
+                  )}
+              </div>
                 </section>
+              <section className="details-item">
+                <h4>Actor/ Actress:</h4>  
                 <p>{characterDetail.portrayed}</p>
+              </section>
+              <section className="details-item">
+                <h4>Character Status:</h4>
                 <p>{characterDetail.status}</p>
+              </section>
+              <section className="checkbox-container">
                 <label className="checkbox-label" htmlFor="favorite_char">
-                  Favorite Character
                   <img
+                    className="checkbox-img"
                     id="favorite-checkbox"
                     src={ WhiteFavorite }
                     alt="Favorite Checkbox"
-                  />
+                    />
                   <input
                     type="checkbox"
                     name="favorite_char"
                     id="favorite_char"
                     className="favorite-check-box"
                     onClick={ favoriteChar }
-                  />
+                    />
                 </label>
               </section>
-            </main>
-          </div>
-      }
+            </section>
+          </main>
+        </div>
+    }
     </div>
   );
 }

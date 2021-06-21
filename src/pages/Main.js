@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import BrakingBadContext from '../context/BrakingBadContext';
 import BreakingbadIconBlack from '../icons/icons8-breaking-bad-black.svg';
+import Loading from '../components/Loading';
 
 export default function Main() {
   const { characters } = useContext(BrakingBadContext);
@@ -9,15 +10,16 @@ export default function Main() {
   return (
     <div className="background">
       {(!characters.length)
-        ? <h1>Loading...</h1>
+        ? <Loading />
         : <div>
           <header>
-            <h1 className="title">Braking Bad Characters</h1>
+            <h1 className="title">Characters</h1>
             <Link
               className="title-button"
               to={'/favorites'}
             >
               <img
+                className="title-button-img"
                 src={ BreakingbadIconBlack }
                 alt="Home Button"
               />

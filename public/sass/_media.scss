@@ -1,0 +1,190 @@
+@media only screen and (max-width: 380px) {
+  header {
+    position: relative;
+  }
+  .title-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .details-img {
+    width: 30rem;
+    height: 40rem;
+  }
+
+  .checkbox-container {
+    position: absolute;
+    bottom: 1rem;
+    right: 2.5rem;
+    justify-content: flex-end;
+  }
+  .details-item-occupation {
+    display: flex;
+    flex-direction: row;
+    :not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .checkbox-container {
+    position: absolute;
+    display: inline-block;
+  }
+
+  .checkbox-label {
+    margin-left: 30rem;
+  }
+  .details-name {
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: $white;
+    line-height: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .details-item-occupation {
+    :not(:first-child) {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 585px) {
+  .details-img {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .checkbox-label {
+    margin-left: 20rem;
+    margin-bottom: 10rem;
+  }
+
+  .checkbox-container {
+    position: absolute;
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  .title-button {
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .details-name {
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    color: $white;
+    line-height: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .details-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details-item {
+    justify-content: flex-start;
+    margin-left: 12rem;
+  }
+
+  .checkbox-container {
+    display: flex;
+    justify-content: center;
+    bottom: 1rem;
+    right: 3.8rem;
+  }
+
+  .checkbox-label {
+    position: none;
+  }
+  .details-img {
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    position: relative;
+    margin-left: 0px;
+    text-align: center;
+  }
+  .title-button {
+    position: absolute;
+    top: 1.7rem;
+    right: 1.7rem;
+  }
+
+  .details-item {
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+
+  .checkbox-container {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .title-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding-top: 5px;
+    padding-right: 5px;
+  }
+
+  .title-button-img {
+    width: 25px;
+    height: 25px;
+  }
+  .checkbox-container {
+    margin-bottom: 2rem;
+  }
+
+  .details-img {
+    margin-left: 0px;
+    margin-bottom: 0px;
+  }
+}
